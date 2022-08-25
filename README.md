@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Food Order App
+
+Hello, i am Yasin. I made this project to improve my react skills. I used Redux/Toolkit, React Hooks, Framer Motion for animations, React Icons , SCSS and Firebase.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
