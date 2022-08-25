@@ -1,0 +1,62 @@
+@import "./../../styles/main.scss";
+
+.user {
+  position: relative;
+  margin-right: 1rem;
+  display: flex;
+  & img {
+    height: 4.5em;
+    width: 4.5rem;
+  }
+  @include respond(phone) {
+    order: 2;
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &--icon {
+      height: 3.5em;
+      width: 3.5rem;
+      color: white;
+      margin-right: 0.5rem;
+    }
+    &--number {
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: red;
+      border-radius: 50%;
+      padding: 0.3rem;
+    }
+  }
+
+  &__links {
+    margin-top: 5.5rem;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 15rem;
+    list-style-type: none;
+    display: block;
+    background-color: var(--color-grey-1);
+    padding: 1.2rem;
+  }
+  &__link {
+    text-decoration: none;
+    color: var(--color-primary);
+    display: flex;
+    margin-top: 0.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    display: inline-flex;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}

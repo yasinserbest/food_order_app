@@ -1,0 +1,74 @@
+@import "../../styles/main.scss";
+.order__modal {
+  @include popup-height(auto, 40rem);
+  min-height: 55rem !important;
+  &--backdrop {
+    @include backdrop;
+  }
+  &--btn {
+    margin-top: 2rem;
+    width: 100%;
+    border-radius: 10px;
+    @include button-primary(2rem, 0, 2rem);
+  }
+  &--close {
+    @include popup-close-btn;
+  }
+  &--item {
+    display: flex;
+    margin-top: 3rem;
+
+    & img {
+      width: 10rem;
+      flex: 50%;
+      max-height: 25rem;
+    }
+    &--desc {
+      margin-left: 1rem;
+      &-name {
+        color: var(--color-secondary);
+      }
+      &-detail {
+        font-weight: 200;
+      }
+    }
+    &-details {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: space-around;
+      &-piece {
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+        border: 1px solid grey;
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+      }
+      &-price {
+        color: green;
+      }
+    }
+    &-ingredients {
+      &-title {
+        color: var(--color-primary);
+        margin: 2rem 0;
+      }
+      &-input {
+        display: none;
+      }
+      &-label {
+        margin-left: 1rem;
+        color: green;
+      }
+      &-input:checked + &-label {
+        text-decoration: line-through;
+        color: red;
+      }
+      &-label:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.display-none {
+  display: none;
+}

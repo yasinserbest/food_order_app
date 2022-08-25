@@ -1,0 +1,13 @@
+@import "../../styles/main.scss";
+.recommends {
+  margin: 4rem 4rem;
+}
+.wrapper {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+  grid-template-rows: repeat(auto-fit, minmax(20rem, 25rem));
+  grid-gap: 2rem;
+  grid-auto-rows: 25rem;
+  justify-content: center;
+}

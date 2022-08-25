@@ -1,0 +1,102 @@
+@import "../../styles/main.scss";
+.addProduct {
+  margin-top: 11vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  &__title {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+  &__form {
+    background-color: #eaeaea;
+    padding: 2rem 3rem;
+    margin-top: 3rem;
+    width: 80%;
+    &--items {
+      //this is form 3 group input row
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    &--item {
+      &-label,
+      &-labelGroup {
+        margin-top: 1rem;
+        font-size: 2rem;
+        display: block;
+        color: var(--color-primary);
+      }
+      &-labelGroup {
+        font-size: 1.5rem;
+      }
+      &-input {
+        font-size: 2rem;
+        margin-top: 1rem;
+        display: block;
+        width: 100%;
+        height: 3rem;
+        border: 1px solid #ccc;
+        outline: none;
+        color: var(--color-primary);
+        transition: 0.2s;
+        font-family: "Montserrat", sans-serif;
+        padding: 1rem 0.5rem;
+
+        &:focus {
+          outline: 1px solid var(--color-primary);
+          outline-offset: 2px;
+        }
+      }
+    }
+    &--image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border: 2px solid gray;
+      width: "100%";
+      height: 20rem;
+      margin: 3rem 0;
+
+      &-filledImageContainer {
+        position: relative;
+        height: 100%;
+
+        &-img {
+          margin-top: 3rem;
+          height: 12rem;
+          width: 19rem;
+          object-fit: cover;
+        }
+        &-btn {
+          position: absolute;
+          top: 0;
+          right: -15px;
+          border-radius: 50%;
+          padding: 1.5rem;
+          background-color: red;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+      &-emptyImageContainer {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: var(--color-primary);
+      }
+    }
+  }
+  &__btn {
+    margin-top: 1rem;
+    @include button-primary(1.5rem, 3rem, 2rem);
+  }
+}

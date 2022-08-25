@@ -1,0 +1,48 @@
+@import "../../../styles/main.scss";
+.feedback {
+  &__backdrop {
+    @include backdrop;
+  }
+  &__modal {
+    @include popup-height(auto, auto);
+
+    &--close {
+      @include popup-close-btn;
+    }
+  }
+}
+.feedback {
+  &__wrapper {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+  &__title {
+    color: var(--color-primary);
+  }
+  &__textarea {
+    width: 100%;
+    height: 15rem;
+    margin-top: 2rem;
+    border: 1px solid var(--color-primary);
+    box-sizing: border-box;
+    transition: all 0.1s;
+    color: var(--color-primary);
+    font-family: "Montserrat", sans-serif;
+
+    &:focus {
+      outline: 2px solid var(--color-secondary);
+      outline-offset: 2px;
+      color: black;
+    }
+  }
+  &__buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    &-btn {
+      @include button-primary(1.5rem, 3rem, 2rem);
+    }
+  }
+}

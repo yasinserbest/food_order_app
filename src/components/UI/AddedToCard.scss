@@ -1,0 +1,46 @@
+.addedItem {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: rgb(249, 249, 249);
+  top: 8vh;
+  right: 0;
+  width: 35rem;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  z-index: 5;
+  &__photo {
+    width: 20rem;
+    max-height: 10rem;
+    img {
+      max-height: 10rem;
+      width: 100%;
+      max-width: 8rem;
+    }
+  }
+  &__details {
+    &--title {
+      color: var(--color-primary);
+      font-weight: 600;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+    &--desc {
+      color: var(--color-primary);
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+    &--price {
+      font-size: 1.2rem;
+      color: green;
+    }
+    &--arrow {
+      position: absolute;
+      font-size: 2rem;
+      top: -10px;
+      right: 25%;
+      color: rgb(249, 249, 249);
+    }
+  }
+}

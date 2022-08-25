@@ -1,0 +1,94 @@
+@import "../../styles/main.scss";
+.card {
+  z-index: 2;
+  position: absolute;
+  height: 90vh;
+  background-color: #f6f6f6;
+  right: 2rem;
+  top: 10vh;
+  width: 25vw;
+  overflow-y: scroll;
+  padding: 1rem 1rem;
+
+  @include respond(tab-port) {
+    width: 50vw;
+  }
+  @include respond(phone) {
+    width: 90%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    align-items: center;
+
+    &--btn-back {
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover,
+      &:active {
+        transform: translateX(-3px);
+      }
+    }
+    &--btn-clear {
+      background-color: var(--color-grey-1);
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  }
+  &__items {
+    max-height: 50%;
+    overflow-y: scroll;
+  }
+
+  &__checkout {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 5rem;
+    background-color: rgba(234, 234, 234, 0.3);
+    text-align: center;
+
+    &--row {
+      padding: 1rem;
+      margin: 0 3rem;
+      display: flex;
+      justify-content: space-between;
+      font-size: 2rem;
+    }
+    &--btn {
+      margin-top: 2rem;
+      width: 100%;
+      border-radius: 10px;
+      @include button-primary(2rem, 0, 2rem);
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.emptyCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: gray;
+  &__img {
+    align-self: center;
+    position: relative;
+  }
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+  }
+  &__message {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+.ordering {
+  display: flex;
+}

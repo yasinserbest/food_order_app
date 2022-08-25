@@ -1,0 +1,15 @@
+@keyframes shake {
+  0% {
+    transform-origin: top center;
+    transform: rotate(15deg);
+  }
+  50% {
+    transform-origin: top center;
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform-origin: top center;
+    transform: rotate(15deg);
+  }
+}

@@ -1,0 +1,44 @@
+.ml-xs {
+  margin-left: 1rem;
+}
+.light {
+  font-weight: 200;
+}
+.slight-shadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.35s;
+
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+}
+.medium-shadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: all 0.35s;
+  &:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+}
+.click {
+  transition: 0.3s;
+  &:hover {
+    transform: translateY(1px);
+
+    opacity: 0.7;
+  }
+  &:active {
+    transform: translateY(3px);
+  }
+}
+.line-through {
+  text-decoration: line-through;
+  color: red !important;
+}
+.flex {
+  display: flex;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

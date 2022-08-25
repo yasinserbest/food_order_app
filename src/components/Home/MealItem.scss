@@ -1,0 +1,62 @@
+.item {
+  background-color: rgba(#eaeaea, 0.3);
+  position: relative;
+  padding: 1rem;
+
+  &__picture {
+    // width: 12rem;
+    // height: 12rem;
+    & img {
+      transition: all 0.3s;
+      height: 12rem;
+    }
+  }
+
+  &__picture:hover {
+    & img {
+      height: 15rem;
+    }
+  }
+
+  &__add {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    color: var(--color-secondary);
+    font-size: 3rem;
+    cursor: pointer;
+    &:hover {
+      animation: shake 2s infinite;
+    }
+  }
+  &__details {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    text-align: end;
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    &--name {
+      font-weight: 600;
+    }
+
+    &--desc {
+      font-weight: 200;
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    &--price {
+      color: green;
+      margin-top: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    }
+  }
+}
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

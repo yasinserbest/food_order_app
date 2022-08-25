@@ -1,0 +1,49 @@
+@import "../../../styles/main.scss";
+.userOrders {
+  margin-top: 10vh;
+  &__heading {
+    margin-top: 12rem;
+    margin-left: 2rem;
+  }
+  &__backdrop {
+    @include backdrop;
+  }
+  &__modal {
+    @include popup-height(85%, 40rem);
+    overflow-y: scroll;
+
+    &--buttons {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 2rem;
+    }
+    &--button {
+      @include button-primary(1rem, 2rem, 2rem);
+    }
+    &--close {
+      @include popup-close-btn;
+    }
+  }
+  &__items {
+    &--wrapper {
+      max-height: 80%;
+      overflow-y: scroll;
+    }
+    &--total {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-around;
+      &-label {
+        font-weight: 600;
+      }
+      &-price {
+        color: green;
+      }
+    }
+  }
+}
+
+.order__item--piece {
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}

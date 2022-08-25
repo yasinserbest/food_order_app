@@ -1,0 +1,43 @@
+@import "../../styles/main.scss";
+.card__item {
+  margin-top: 2rem;
+  background-color: rgba(234, 234, 234, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  position: relative;
+
+  &--pic {
+    & img {
+      width: 9rem;
+    }
+  }
+  &--detail {
+  }
+  &--piece {
+    display: flex;
+    align-items: center;
+    margin-right: 0.4rem;
+    &-piece {
+      margin: 0 0.5rem;
+    }
+    &-minus,
+    &-plus {
+      background-color: white;
+      padding: 0.2rem;
+      cursor: pointer;
+    }
+  }
+
+  &--delete {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+}

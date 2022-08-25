@@ -1,0 +1,142 @@
+@import "./../../styles/main.scss";
+.navbar {
+  padding: 0 2rem;
+  height: 10vh;
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 98%;
+  z-index: 2;
+  top: 0;
+  &__logo {
+    & img {
+      height: 6rem;
+      width: 6rem;
+    }
+    @include respond(phone) {
+      order: 1;
+    }
+  }
+
+  &__links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+
+    & li {
+      margin: 1rem 0;
+    }
+    @include respond(phone) {
+      position: fixed;
+      left: -100%;
+      top: 10vh;
+      flex-direction: column;
+      background-color: var(--color-primary);
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      &.active {
+        left: 0%;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 3rem;
+    color: white;
+    align-self: center;
+    margin-left: 3rem;
+    text-decoration: none;
+    position: relative;
+    padding: 0 10px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: white;
+      height: 3px;
+      width: 0;
+      left: 5%;
+      bottom: -10px;
+      transition: 0.3s;
+    }
+    &:hover::after {
+      width: 85%;
+    }
+
+    @media (max-width: 750px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 650px) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone) {
+      margin: 6rem 0;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    cursor: pointer;
+    @include respond(phone) {
+      display: block;
+
+      &--active {
+        & .navbar__bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        & .navbar__bar:nth-child(2) {
+          opacity: 0;
+        }
+        & .navbar__bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+  }
+  &__bar {
+    display: block;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    width: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  &__login {
+    order: 3;
+    background-color: white;
+    color: var(--color-primary);
+    cursor: pointer;
+    padding: 2rem 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+}
+@media (max-width: 600px) {
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+.activee {
+  background-color: white !important ;
+  color: var(--color-primary) !important;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  padding: 3vh 3rem;
+
+  @include respond(phone) {
+    clip-path: polygon(25% 5%, 100% 5%, 75% 90%, 0% 90%);
+  }
+}

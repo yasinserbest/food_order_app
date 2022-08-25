@@ -1,0 +1,72 @@
+@import "../../styles/main.scss";
+.section__meals {
+  margin: 4rem 4rem;
+}
+.categories {
+  background-color: rgba(234, 234, 234, 0.3);
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.category {
+  margin: 4rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--color-primary);
+  }
+  &:hover &__pic {
+    background-color: white;
+  }
+  &:hover &__pic:first-child {
+    color: var(--color-secondary);
+  }
+  &:hover &__name {
+    color: white;
+  }
+  &__pic {
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    font-size: 4rem;
+    padding: 2rem;
+    &:first-child {
+      color: white;
+      //   & svg {
+      //     position: relative;
+      //     left: 10px;
+      //   }
+    }
+  }
+  &__name {
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: gray;
+  }
+}
+.meals {
+  margin: 2rem 15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+  grid-template-rows: repeat(auto-fit, minmax(20rem, 25rem));
+  grid-gap: 2rem;
+  grid-auto-rows: 25rem;
+  justify-content: center;
+
+  @include respond(tab-land) {
+    margin: 2rem 8rem;
+  }
+  @include respond(tab-port) {
+    margin: 2rem 3rem;
+  }
+}

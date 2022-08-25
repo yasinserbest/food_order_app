@@ -1,0 +1,65 @@
+@import "../../styles/main.scss";
+.login {
+  // &__backdrop {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100vh;
+  //   z-index: 10;
+  //   background: rgba(0, 0, 0, 0.75);
+  // }
+  &__modal {
+    box-sizing: border-box;
+    position: fixed;
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    padding: 2rem 4rem;
+    z-index: 100;
+    overflow: hidden;
+    background-color: white;
+  }
+  &__title {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    //    padding: 2rem 4rem;
+
+    &--wrapper {
+      margin-bottom: 2rem;
+    }
+
+    &--label {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--color-primary);
+      font-weight: 200;
+    }
+    &--input {
+      display: block;
+      width: 100%;
+      height: 4rem;
+    }
+  }
+  &__btn {
+    @include button-primary(1rem, 2rem, 2.2rem);
+    width: 13rem;
+    margin-top: 1.5rem;
+
+    &--close {
+      @include popup-close-btn;
+      font-size: 1.4rem;
+    }
+    &--createAccount {
+      margin-top: 1rem;
+      color: var(--color-primary);
+      cursor: pointer;
+    }
+  }
+}

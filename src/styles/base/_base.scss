@@ -1,0 +1,36 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%; /*normalde biliyosun buraya 10px diyodun fakat o şekilde olunca kullanıcı  ayarlayamıyor fontu. o yüzden bunu kullan. //1rem = 10px; 10px/16px = 62.5% */
+
+  @include respond(tab-land) {
+    //width <1200
+    font-size: 56.25%; //1 remi 9 px yapmak istiyorum. o yüzden 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    //width < 900
+    font-size: 50%; //1 remi 8 px yapmak istiyorum. o yüzden 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1 remi 12 px yapmak istiyorum. o yüzden 12/16 = 75%
+  }
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background-color: rgb(184, 69, 24);
+  color: rgb(214, 177, 12);
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+main {
+}

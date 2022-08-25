@@ -1,0 +1,169 @@
+@import "../../styles/main.scss";
+.header {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+
+  &__span {
+    color: var(--color-secondary);
+    font-style: italic;
+  }
+
+  &__desc {
+    position: absolute;
+    background-color: rgba(#ffffff, 0.5);
+    box-shadow: 0 3rem 6rem rgba(#000000, 0.1);
+    border-radius: 3px;
+    transform: skewX(-8deg);
+    left: 5%;
+    top: 10%;
+    width: 40vw;
+    padding: 5rem;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    & .heading--primary,
+    .heading--secondary {
+      transform: skewX(8deg) !important;
+    }
+    @include respond(tab-land) {
+      top: 30%;
+    }
+
+    &--buttons {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      transform: skewX(8deg);
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+    }
+    &--button {
+      font-size: 3rem;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      color: var(--color-primary);
+
+      @include respond(tab-port) {
+        margin-top: 1.5rem;
+      }
+
+      @include respond(tab-land) {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+      }
+
+      &:first-child {
+        background-color: var(--color-secondary);
+        transition: 0.3s;
+        @include respond(tab-port) {
+          width: 70%;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      &-icon {
+        margin-right: 1rem;
+      }
+
+      &-text {
+      }
+    }
+  }
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  overflow: hidden;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+  }
+}
+/*.header {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+
+  &__desc {
+    width: 40vw;
+    margin-left: 10rem;
+    letter-spacing: 1px;
+    padding: 4rem;
+    color: var(--color-primary);
+
+    &--title {
+      font-size: 6rem;
+      font-weight: 600;
+      @include respond(tab-land) {
+        font-size: 4rem;
+      }
+      & span {
+        font-style: italic;
+        color: var(--color-secondary);
+      }
+    }
+    &--subtitle {
+      font-size: 4rem;
+      margin-top: 2rem;
+      font-weight: 200;
+      @include respond(tab-land) {
+        font-size: 3rem;
+      }
+    }
+  }
+  &__buttons {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__button {
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--color-primary);
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+    }
+
+    &:first-child {
+      background-color: var(--color-secondary);
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &-icon {
+      margin-right: 1rem;
+    }
+
+    &-text {
+    }
+  }
+
+  &__video {
+    width: 50vw;
+    margin-right: 3rem;
+
+    &--bg {
+      width: 100%;
+      border-radius: 3px;
+    }
+  }
+}
+*/

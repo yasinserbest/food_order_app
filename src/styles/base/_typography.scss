@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,600;1,400&display=swap");
+
+.heading--primary {
+  font-size: 6rem;
+  font-weight: 600;
+  @include respond(tab-land) {
+    font-size: 4rem;
+  }
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+}
+.heading--secondary {
+  font-size: 4rem;
+  margin-top: 2rem;
+  font-weight: 200;
+  @include respond(tab-land) {
+    font-size: 3rem;
+  }
+  @include respond(tab-land) {
+    font-size: 2rem;
+  }
+}
+.heading--tertiary {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 2rem;
+}
+.error__text--input {
+  color: red;
+  font-size: 1.4rem;
+  margin-top: 3px;
+}
+.invalid input {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+
+.invalid input:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
