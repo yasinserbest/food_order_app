@@ -15,7 +15,7 @@ const Header = () => {
 
       <div className="header__desc">
         <div className="heading--primary">
-          We don't cook, we create your{" "}
+          W don't cook, we create your{" "}
           <span className="header__span">emotions</span>
         </div>
         <div className="heading--secondary">
