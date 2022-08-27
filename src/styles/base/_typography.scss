@@ -3,11 +3,15 @@
 .heading--primary {
   font-size: 6rem;
   font-weight: 600;
-  @include respond(tab-land) {
+
+  @include respond(tab-port) {
     font-size: 4rem;
   }
-  @include respond(tab-port) {
+  @include respond(tab-land) {
     font-size: 3rem;
+  }
+  @include respond(phone-xs) {
+    font-size: 2.2rem;
   }
 }
 .heading--secondary {
@@ -15,10 +19,14 @@
   margin-top: 2rem;
   font-weight: 200;
   @include respond(tab-land) {
+    font-size: 2rem;
+  }
+  @include respond(tab-port) {
     font-size: 3rem;
   }
-  @include respond(tab-land) {
-    font-size: 2rem;
+  @include respond(phone-s) {
+    font-size: 1.5rem;
+    margin-top: 4px;
   }
 }
 .heading--tertiary {

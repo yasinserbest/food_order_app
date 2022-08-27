@@ -1,6 +1,15 @@
 @mixin respond($breakpoint) {
+  @if $breakpoint == phone-xs {
+    @media (max-width: 25em) {
+      @content;
+    } //400px
+  }
+  @if $breakpoint == phone-s {
+    @media (max-width: 31.25em) {
+      @content;
+    } //500px
+  }
   @if $breakpoint == phone {
-    //buraya phone small ekle. isenin telefon 375px
     @media (max-width: 37.5em) {
       @content;
     } //600px
@@ -66,6 +75,7 @@
   left: 5px;
   color: var(--color-secondary);
   cursor: pointer;
+  font-size: 2.5rem;
 }
 @mixin button-primary($padding1, $padding2, $font-size) {
   background-color: var(--color-secondary);

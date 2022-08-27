@@ -96,9 +96,14 @@ const TaskInfo = (props) => {
                     <div className="">{item.name}</div>
                   </div>
                   <div className="taskInfo__item--piece">x {item.piece}</div>
-                  <div className="taskInfo__item--ingredients">
-                    without {item.removedIngredients?.join(" , ")}
-                  </div>
+                  {item.removedIngredients ? (
+                    <div className="taskInfo__item--ingredients">
+                      without {item.removedIngredients?.join(" , ")}
+                    </div>
+                  ) : (
+                    ""
+                  )}
+
                   <div className="taskInfo__item--price">${item.price}</div>
                 </div>
               ))}

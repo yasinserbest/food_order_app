@@ -5,6 +5,13 @@
   height: 90vh;
   display: flex;
 
+  @include respond(phone-s) {
+    height: 44vh;
+  }
+  @include respond(phone-xs) {
+    height: 40vh;
+  }
+
   &__span {
     color: var(--color-secondary);
     font-style: italic;
@@ -22,6 +29,16 @@
     padding: 5rem;
     letter-spacing: 1px;
     color: var(--color-primary);
+
+    @include respond(phone-s) {
+      width: 51vw;
+      padding: 2rem;
+    }
+    @include respond(phone-s) {
+      width: 59vw;
+      padding: 1.2rem;
+    }
+
     & .heading--primary,
     .heading--secondary {
       transform: skewX(8deg) !important;
@@ -39,20 +56,27 @@
       @include respond(tab-port) {
         flex-direction: column;
       }
+      @include respond(phone-s) {
+        flex-direction: row;
+        margin-top: 1rem;
+      }
     }
     &--button {
       font-size: 3rem;
       padding: 1rem 2rem;
       text-decoration: none;
       color: var(--color-primary);
+      @include respond(tab-land) {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+      }
 
       @include respond(tab-port) {
         margin-top: 1.5rem;
       }
 
-      @include respond(tab-land) {
-        font-size: 2rem;
-        padding: 0.5rem 1rem;
+      @include respond(phone-s) {
+        display: flex;
       }
 
       &:first-child {
@@ -91,79 +115,3 @@
     object-fit: fill;
   }
 }
-/*.header {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-
-  &__desc {
-    width: 40vw;
-    margin-left: 10rem;
-    letter-spacing: 1px;
-    padding: 4rem;
-    color: var(--color-primary);
-
-    &--title {
-      font-size: 6rem;
-      font-weight: 600;
-      @include respond(tab-land) {
-        font-size: 4rem;
-      }
-      & span {
-        font-style: italic;
-        color: var(--color-secondary);
-      }
-    }
-    &--subtitle {
-      font-size: 4rem;
-      margin-top: 2rem;
-      font-weight: 200;
-      @include respond(tab-land) {
-        font-size: 3rem;
-      }
-    }
-  }
-  &__buttons {
-    margin-top: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-  }
-  &__button {
-    font-size: 3rem;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    color: var(--color-primary);
-
-    @include respond(tab-land) {
-      font-size: 2rem;
-      padding: 0.5rem 1rem;
-    }
-
-    &:first-child {
-      background-color: var(--color-secondary);
-      transition: 0.3s;
-
-      &:hover {
-        opacity: 0.8;
-      }
-    }
-    &-icon {
-      margin-right: 1rem;
-    }
-
-    &-text {
-    }
-  }
-
-  &__video {
-    width: 50vw;
-    margin-right: 3rem;
-
-    &--bg {
-      width: 100%;
-      border-radius: 3px;
-    }
-  }
-}
-*/

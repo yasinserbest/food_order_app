@@ -41,6 +41,10 @@
         color: green;
         font-size: 1.6rem;
       }
+
+      @include respond(phone-s) {
+        margin-top: 2rem;
+      }
     }
   }
 }

@@ -6,6 +6,12 @@
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
+
+    @include respond(phone-xs) {
+      flex-direction: column;
+      min-height: 17rem;
+    }
+
     &--item {
       display: flex;
       flex-wrap: nowrap;
@@ -18,10 +24,14 @@
         margin-right: 2rem;
         content: "";
         background-color: var(--color-primary);
+        @include respond(phone-xs) {
+          height: 33px;
+        }
       }
       &-key {
         font-weight: 200;
         font-size: 1.5rem;
+        color: var(--color-primary);
       }
       &-value {
         margin-top: 0.35rem;
@@ -45,8 +55,8 @@
       margin-top: 1rem;
       align-self: flex-end;
       font-weight: 600;
-
       font-size: 2rem;
+      color: green;
     }
     &--buttons {
       margin-top: 7rem;
@@ -78,6 +88,9 @@
       display: flex;
       align-items: center;
       min-width: 30rem;
+      @include respond(phone-xs) {
+        min-width: 17rem;
+      }
       & img {
         width: 7rem;
         height: 7rem;
@@ -86,6 +99,11 @@
     }
     &--ingredients {
       min-width: 15rem;
+      color: red;
+      text-align: center;
+    }
+    &--price {
+      color: green;
     }
   }
 }
