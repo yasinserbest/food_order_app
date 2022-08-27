@@ -12,9 +12,9 @@ const Recommends = (props) => {
         <MealItem
           show={false}
           id={1658595123188}
-          img="images/creamy-lemon-parmesan-chicken.png"
-          name="Creamy Lemon Parmesan Chicken"
-          desc="When it comes to weeknight dinners, this is what we dream of. It's simple, creamy, and so dang satisfying."
+          img="images/mediterranean-orzos.png"
+          name="Mediterranian's Orzos"
+          desc="Looking for a new and exciting way to enjoy your summer salads? Then you need to try Mediterranean Orzo Salad!          "
           price="32.99"
           openModal={props.onOpenModal}
         />

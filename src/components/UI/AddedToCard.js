@@ -26,7 +26,7 @@ const AddedToCard = () => {
           className="addedItem"
         >
           <div className="addedItem__photo">
-            <img src={`images/${orderModalProduct.img}`} />
+            <img src={`../../../../../images/${orderModalProduct.img}`} />
           </div>
           <div className="addedItem__details">
             <div className="addedItem__details--title">

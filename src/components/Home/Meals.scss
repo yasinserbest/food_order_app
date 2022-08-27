@@ -9,6 +9,10 @@
   //  justify-content: center;
   overflow-x: scroll;
   scrollbar-width: none;
+  justify-content: center;
+  @include respond(tab-port) {
+    justify-content: unset;
+  }
   @include respond(phone-s) {
     margin: 2rem auto;
   }
